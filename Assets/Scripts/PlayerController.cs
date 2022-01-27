@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
 
 	// Create public variables for player speed, and for the Text UI game objects
-	public float speed;
+	public float speed = 0;
 	public TextMeshProUGUI countText;
 	public GameObject winTextObject;
 
@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
 	{
 		countText.text = "Count: " + count.ToString();
 
-		if (count >= 12)
+		if (count >= 10)
 		{
 			// Set the text value of your 'winText'
 			winTextObject.SetActive(true);
