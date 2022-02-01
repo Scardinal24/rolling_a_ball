@@ -44,6 +44,11 @@ public class PlayerController : MonoBehaviour
 	void OnTriggerEnter(Collider other)
 	{
 		// ..and if the GameObject you intersect has the tag 'Pick Up' assigned to it..
+
+		if (other.gameObject.CompareTag("castle"))
+		{
+			other.gameObject.SetActive(true);
+		}
 		if (other.gameObject.CompareTag("PickUp"))
 		{
 			other.gameObject.SetActive(false);
