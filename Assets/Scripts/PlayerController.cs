@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 	void FixedUpdate()
 	{
 		// Create a Vector3 variable, and assign X and Z to feature the horizontal and vertical float variables above
-		Vector3 movement = new Vector3(movementX, 0.0f, movementY);
+		Vector3 movement = new Vector3(movementY, 0.0f, -movementX);
 
 		rb.AddForce(movement * speed);
 	}
